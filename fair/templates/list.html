@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block conteudo %}  
+    <table border="table">
+    
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            
+        </tr>
+        
+    {% for product in products %}
+        <tr>
+            <td>{{product.name}}</td>
+            <td>{{product.value}}</td>
+    
+        </tr>
+        {% endfor %}           
+</table>       
+{% endblock %}
