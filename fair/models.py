@@ -21,4 +21,11 @@ class Quantity (models.Model):
     shopping_cart=models.ForeignKey(Shopping_Cart, on_delete=models.CASCADE, primary_key=True)
   
     
-    
+
+
+
+
+
+
+
+

@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block conteudo %}  
-    <table border="table">
+    <table class="table">
     
         <tr>
+            <th>Id</th>
             <th>Nome</th>
             <th>Preço</th>
             
@@ -10,10 +11,15 @@
         
     {% for product in products %}
         <tr>
+            <td>{{product.id}}</td>
             <td>{{product.name}}</td>
             <td>{{product.value}}</td>
     
+        <td><a href="/fair/{{product.id}}/comprar/">Comprar</a></td>
         </tr>
-        {% endfor %}           
+        
+        {% endfor %}    
+      <a href="/fair/show/">Carrinho: {{request.session.li | length}}</button>
+              
 </table>       
 {% endblock %}
